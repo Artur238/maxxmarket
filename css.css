@@ -67,36 +67,50 @@
 }
 
 .feature-icon{
-  position:relative;
-
-  font-size:78px;
-
-  color:#3f82ff;
+  width:82px;
+  height:82px;
 
   margin-bottom:28px;
 
-  line-height:1;
+  position:relative;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.feature-icon svg{
+  width:68px;
+  height:68px;
+
+  stroke:#3f82ff;
+  fill:none;
+
+  stroke-width:1.8;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+
+  position:relative;
+  z-index:2;
 }
 
 .feature-icon::after{
   content:"";
+
   position:absolute;
 
   width:90px;
   height:90px;
 
-  left:50%;
-  top:50%;
-
-  transform:translate(-50%,-50%);
+  border-radius:50%;
 
   background:#2b74ff;
 
   filter:blur(40px);
 
-  opacity:.18;
+  opacity:.16;
 
-  z-index:-1;
+  z-index:1;
 }
 
 .feature-card h3{
