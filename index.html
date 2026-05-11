@@ -333,273 +333,139 @@ nav a:hover{
 }
 
 .feature{
-    background:linear-gradient(180deg,#0d152c,#091120);
-    border-radius:28px;
-    padding:36px 28px;
+    position:relative;
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+    180deg,
+    #101a35 0%,
+    #0a1120 100%
+    );
+
+    border-radius:30px;
+
+    padding:34px 28px;
+
     border:1px solid rgba(255,255,255,.05);
+
     transition:.35s;
+
+    min-height:255px;
+}
+
+.feature::before{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(
+    circle at top left,
+    rgba(70,120,255,.18),
+    transparent 45%
+    );
+
+    pointer-events:none;
+}
+
+.feature::after{
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+    height:220px;
+
+    top:-120px;
+    right:-120px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+    circle,
+    rgba(70,120,255,.08),
+    transparent 70%
+    );
+
+    pointer-events:none;
 }
 
 .feature:hover{
     transform:translateY(-6px);
-    box-shadow:0 0 35px rgba(37,99,255,.18);
+
+    border-color:
+    rgba(80,130,255,.18);
+
+    box-shadow:
+    0 0 35px rgba(37,99,255,.16);
 }
 
+/* ICON */
+
 .feature-icon{
-    font-size:56px;
-    color:#4d8fff;
-    margin-bottom:28px;
+    width:82px;
+    height:82px;
+
+    margin-bottom:26px;
+
+    position:relative;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.feature-icon svg{
+    width:68px;
+    height:68px;
+
+    stroke:#4285ff;
+    fill:none;
+
+    stroke-width:1.8;
+
+    stroke-linecap:round;
+    stroke-linejoin:round;
+
+    position:relative;
+    z-index:2;
+}
+
+.feature-icon::after{
+    content:"";
+
+    position:absolute;
+
+    width:90px;
+    height:90px;
+
+    border-radius:50%;
+
+    background:#2563ff;
+
+    filter:blur(40px);
+
+    opacity:.18;
+
+    z-index:1;
 }
 
 .feature h3{
     font-size:24px;
     margin-bottom:12px;
+    position:relative;
+    z-index:2;
 }
 
 .feature p{
     color:#7f8db7;
     line-height:1.7;
     font-size:14px;
-}
-
-/* HOW */
-
-.how{
-    margin-top:24px;
-    display:flex;
-    justify-content:space-between;
-    position:relative;
-}
-
-.how::before{
-    content:"";
-    position:absolute;
-    width:78%;
-    border-top:2px dashed #30426c;
-    top:26px;
-    left:11%;
-}
-
-.step{
     position:relative;
     z-index:2;
-    text-align:center;
-    width:33%;
-}
-
-.step-circle{
-    width:54px;
-    height:54px;
-    border-radius:50%;
-    background:linear-gradient(180deg,#3b8dff,#2563ff);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin:auto;
-    margin-bottom:18px;
-    font-size:13px;
-    font-weight:700;
-    box-shadow:0 0 20px rgba(37,99,255,.35);
-}
-
-.step h4{
-    margin-bottom:10px;
-    font-size:19px;
-}
-
-.step p{
-    color:#7f8db7;
-    font-size:14px;
-    line-height:1.7;
-}
-
-/* SECURITY */
-
-.security{
-    margin-top:100px;
-    background:linear-gradient(180deg,#0e1730,#0b1325);
-    border-radius:34px;
-    padding:50px;
-    display:grid;
-    grid-template-columns:1fr 320px;
-    gap:50px;
-    border:1px solid rgba(255,255,255,.05);
-}
-
-.security h2{
-    font-size:42px;
-    margin-bottom:20px;
-    line-height:1.1;
-}
-
-.security p{
-    color:#7f8db7;
-    line-height:1.8;
-    max-width:600px;
-}
-
-.security ul{
-    list-style:none;
-}
-
-.security li{
-    margin-bottom:18px;
-    color:#d8e5ff;
-    font-size:17px;
-}
-
-/* FAQ */
-
-.faq{
-    margin-top:100px;
-}
-
-.faq-box{
-    background:linear-gradient(180deg,#0d152c,#091120);
-    border-radius:22px;
-    padding:24px 28px;
-    margin-bottom:16px;
-    border:1px solid rgba(255,255,255,.05);
-}
-
-.faq-question{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    font-size:16px;
-    font-weight:600;
-}
-
-.faq-answer{
-    margin-top:14px;
-    color:#7f8db7;
-    line-height:1.7;
-    font-size:14px;
-}
-
-/* CTA */
-
-.cta{
-    margin-top:100px;
-    background:
-    radial-gradient(circle at top right,#3b8dff55,transparent 40%),
-    linear-gradient(180deg,#122043,#0b1325);
-    border-radius:38px;
-    padding:80px;
-    text-align:center;
-    border:1px solid rgba(255,255,255,.05);
-}
-
-.cta h2{
-    font-size:60px;
-    margin-bottom:18px;
-    letter-spacing:-2px;
-}
-
-.cta p{
-    color:#8d9bc7;
-    margin-bottom:30px;
-}
-
-/* FOOTER */
-
-footer{
-    padding:60px 0 40px;
-    display:grid;
-    grid-template-columns:1.3fr repeat(4,1fr);
-    gap:40px;
-}
-
-.footer-logo{
-    font-size:20px;
-    font-weight:700;
-    margin-bottom:18px;
-}
-
-.footer-text{
-    color:#6f7ba4;
-    line-height:1.7;
-    font-size:14px;
-}
-
-.footer-col h4{
-    margin-bottom:20px;
-    font-size:15px;
-}
-
-.footer-col a{
-    display:block;
-    margin-bottom:12px;
-    color:#6f7ba4;
-    text-decoration:none;
-    font-size:14px;
-}
-
-/* MOBILE */
-
-@media(max-width:1000px){
-
-    .hero{
-        grid-template-columns:1fr;
-    }
-
-    .stats{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .features{
-        grid-template-columns:1fr;
-    }
-
-    .security{
-        grid-template-columns:1fr;
-    }
-
-    footer{
-        grid-template-columns:1fr 1fr;
-    }
-
-}
-
-@media(max-width:700px){
-
-    nav{
-        display:none;
-    }
-
-    .hero h1{
-        font-size:48px;
-    }
-
-    .stats{
-        grid-template-columns:1fr;
-    }
-
-    .how{
-        flex-direction:column;
-        gap:40px;
-    }
-
-    .how::before{
-        display:none;
-    }
-
-    .step{
-        width:100%;
-    }
-
-    .cta{
-        padding:50px 25px;
-    }
-
-    .cta h2{
-        font-size:42px;
-    }
-
-    footer{
-        grid-template-columns:1fr;
-    }
-
 }
 
 </style>
@@ -609,328 +475,64 @@ footer{
 
 <div class="container">
 
-<header>
-
-<div class="logo">
-<div class="logo-dot"></div>
-ColdSwap
-</div>
-
-<nav>
-<a href="#">Features</a>
-<a href="#">Roadmap</a>
-<a href="#">FAQ</a>
-</nav>
-
-<button class="connect-btn">Connect Wallet</button>
-
-</header>
-
-<!-- HERO -->
-
-<section class="hero">
-
-<div>
-
-<h1>
-Swap Crypto
-Instantly in a
-<span>Cold, Secure</span>
-Environment
-</h1>
-
-<p>
-ColdSwap allows users to swap digital assets securely
-across chains with lightning-fast transaction speed.
-</p>
-
-<div class="hero-buttons">
-<button class="primary-btn">Start Swapping</button>
-<button class="secondary-btn">Learn More</button>
-</div>
-
-</div>
-
-<!-- CARD -->
-
-<div class="swap-card">
-
-<div class="swap-tabs">
-<div class="swap-tab active">Swap</div>
-<div class="swap-tab">Bridge</div>
-</div>
-
-<div class="swap-input">
-
-<div class="swap-top">
-<span>You Pay</span>
-<span>0.23 ETH</span>
-</div>
-
-<div class="swap-main">
-<input value="0.23">
-<div class="token">
-<div class="token-circle eth"></div>
-ETH
-</div>
-</div>
-
-</div>
-
-<div class="swap-middle">
-⇅
-</div>
-
-<div class="swap-input">
-
-<div class="swap-top">
-<span>You Receive</span>
-<span>1089.73 USDT</span>
-</div>
-
-<div class="swap-main">
-<input value="1089.73">
-<div class="token">
-<div class="token-circle usdt"></div>
-USDT
-</div>
-</div>
-
-</div>
-
-<button class="swap-btn">Swap Now</button>
-
-</div>
-
-</section>
-
-<!-- STATS -->
-
-<section class="stats">
-
-<div class="stat">
-<small>Volume</small>
-<h2>$1.2B+</h2>
-</div>
-
-<div class="stat">
-<small>Users</small>
-<h2>120K+</h2>
-</div>
-
-<div class="stat">
-<small>Tokens</small>
-<h2>50+</h2>
-</div>
-
-<div class="stat">
-<small>Execution</small>
-<h2>1 sec</h2>
-</div>
-
-</section>
-
-<!-- FEATURES -->
-
 <h2 class="section-title">Why Choose ColdSwap</h2>
 
 <section class="features">
 
 <div class="feature">
+
 <div class="feature-icon">
-  <svg viewBox="0 0 24 24" fill="none">
-    <path d="M13 2L4 14H11L9 22L20 9H13L13 2Z"/>
-  </svg>
+<svg viewBox="0 0 24 24">
+<path d="M13 2L4 14H11L9 22L20 9H13L13 2Z"/>
+</svg>
 </div>
 
 <h3>Ultra Fast</h3>
+
 <p>
 Fast execution mechanism optimized for
 cross-chain crypto transfers.
 </p>
+
 </div>
 
 <div class="feature">
+
 <div class="feature-icon">
-  <svg viewBox="0 0 24 24" fill="none">
-    <path d="M7 7L12 12L17 7"/>
-    <path d="M7 13L12 18L17 13"/>
-  </svg>
+<svg viewBox="0 0 24 24">
+<path d="M7 7L12 12L17 7"/>
+<path d="M7 13L12 18L17 13"/>
+</svg>
+</div>
+
+<h3>Low Fees</h3>
+
+<p>
+Minimal blockchain transaction
+costs with optimized routing.
+</p>
+
 </div>
 
 <div class="feature">
+
 <div class="feature-icon">
-  <svg viewBox="0 0 24 24" fill="none">
-    <rect x="5" y="11" width="14" height="10" rx="2"/>
-    <path d="M8 11V7C8 4.8 9.8 3 12 3C14.2 3 16 4.8 16 7V11"/>
-  </svg>
+<svg viewBox="0 0 24 24">
+<rect x="5" y="11" width="14" height="10" rx="2"/>
+<path d="M8 11V7C8 4.8 9.8 3 12 3C14.2 3 16 4.8 16 7V11"/>
+</svg>
 </div>
+
 <h3>Secure</h3>
+
 <p>
 Multi-layer encryption and audited
 smart contracts for maximum safety.
 </p>
-</div>
-
-</section>
-
-<!-- HOW -->
-
-<h2 class="section-title">How It Works</h2>
-
-<section class="how">
-
-<div class="step">
-<div class="step-circle">001</div>
-<h4>Connect Wallet</h4>
-<p>Connect your crypto wallet securely.</p>
-</div>
-
-<div class="step">
-<div class="step-circle">002</div>
-<h4>Choose Tokens</h4>
-<p>Select the digital assets you want to swap.</p>
-</div>
-
-<div class="step">
-<div class="step-circle">003</div>
-<h4>Confirm Swap</h4>
-<p>Approve transaction and receive funds instantly.</p>
-</div>
-
-</section>
-
-<!-- SECURITY -->
-
-<section class="security">
-
-<div>
-<h2>Built with Security in Mind</h2>
-
-<p>
-ColdSwap uses audited smart contracts and secure
-infrastructure to protect every transaction.
-</p>
-</div>
-
-<div>
-
-<ul>
-<li>• Non-custodial</li>
-<li>• Transparent Transactions</li>
-<li>• Blockchain Verified</li>
-</ul>
 
 </div>
 
 </section>
-
-<!-- FAQ -->
-
-<section class="faq">
-
-<h2 class="section-title">Frequently Asked Questions</h2>
-
-<div class="faq-box">
-
-<div class="faq-question">
-<span>Is ColdSwap safe?</span>
-<span>⌃</span>
-</div>
-
-<div class="faq-answer">
-Yes. All transactions are secured using
-audited smart contracts and encryption.
-</div>
-
-</div>
-
-<div class="faq-box">
-
-<div class="faq-question">
-<span>Do I need to register?</span>
-<span>⌄</span>
-</div>
-
-</div>
-
-<div class="faq-box">
-
-<div class="faq-question">
-<span>What fees are applied?</span>
-<span>⌄</span>
-</div>
-
-</div>
-
-</section>
-
-<!-- CTA -->
-
-<section class="cta">
-
-<h2>Start Swapping Now</h2>
-
-<p>
-Secure fast, scalable and seamless crypto exchange.
-</p>
-
-<button class="primary-btn">
-Launch App
-</button>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer>
-
-<div>
-
-<div class="footer-logo">
-ColdSwap
-</div>
-
-<div class="footer-text">
-Decentralized crypto exchange platform
-with secure blockchain infrastructure.
-</div>
-
-</div>
-
-<div class="footer-col">
-<h4>Platform</h4>
-<a href="#">Swap</a>
-<a href="#">Bridge</a>
-<a href="#">Liquidity</a>
-<a href="#">Earn</a>
-</div>
-
-<div class="footer-col">
-<h4>Company</h4>
-<a href="#">About</a>
-<a href="#">Security</a>
-<a href="#">Docs</a>
-<a href="#">Blog</a>
-</div>
-
-<div class="footer-col">
-<h4>Resources</h4>
-<a href="#">Support</a>
-<a href="#">FAQ</a>
-<a href="#">Terms</a>
-<a href="#">Privacy</a>
-</div>
-
-<div class="footer-col">
-<h4>Contact</h4>
-<a href="#">Twitter</a>
-<a href="#">Discord</a>
-<a href="#">Telegram</a>
-<a href="#">GitHub</a>
-</div>
-
-</footer>
 
 </div>
 
